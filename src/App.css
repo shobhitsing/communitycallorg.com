@@ -1,0 +1,12 @@
+
+:root {
+  --primary-color: #F15B41;
+  --secondary-color: #6BC0B4;
+  --tertiary-color: #F1EEE5;
+  --quaternary-color: #334F76;
+  --text-color: rgb(255, 98, 0);
+}
+
+.App {
+  text-align: center;
+}
