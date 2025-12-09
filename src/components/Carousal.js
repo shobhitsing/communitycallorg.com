@@ -2,31 +2,39 @@ import { useEffect, useRef, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-const CustomCarousal = ({title, images }) => {
-    const splideRef = useRef();
+const CustomCarousal = ({ title, images }) => {
+  const splideRef = useRef();
 
-    const thumbsOptions = {
-      type        : '',
-      // rewind      : true,
-      gap         : '1rem',
-      pagination  : false,
-      perPage     : 3,
-      width: "85%",
-      fixedWidth  : 250,
-      fixedHeight : 200,
-      // cover       : true,
+  const thumbsOptions = {
+    type: '',
+    // rewind      : true,
+    gap: '1rem',
+    pagination: false,
+    perPage: 3,
+    width: "85%",
+    fixedWidth: 250,
+    fixedHeight: 200,
+    // cover       : true,
 
-    };
+  };
 
-    const prev = () => {
-        let index = splideRef.current.splide.index;
-        splideRef.current.splide.go(index - 1);
-      }
-      
-    const next = () => {
-        let index = splideRef.current.splide.index;
-        splideRef.current.splide.go(index + 1);
-    }
+  const prev = () => {
+    let index = splideRef.current.splide.index;
+    splideRef.current.splide.go(index - 1);
+  }
+
+  const next = () => {
+    let index = splideRef.current.splide.index;
+    splideRef.current.splide.go(index + 1);
+  }
+
+  const galleryImages = [
+    "/images/child.jpg",
+    "/images/child2.jpg",
+    "/images/child3.jpg",
+    "/images/child4.jpg",
+    "/images/child5.jpg",
+  ];
 
   return (
     <div className="w-full flex justify-center items-center">
@@ -40,9 +48,9 @@ const CustomCarousal = ({title, images }) => {
         </div>
 
         {/* Carousel */}
-        <Splide aria-label="My Favorite Images" ref={splideRef}   options={thumbsOptions} >
-          {images &&
-            images.map((image, index) => (
+         <Splide aria-label="My Favorite Images" ref={splideRef}   options={thumbsOptions} >
+          {galleryImages &&
+            galleryImages?.map((image, index) => (
               <SplideSlide key={index}>
                 <img
                   src={image}
@@ -51,10 +59,12 @@ const CustomCarousal = ({title, images }) => {
                 />
               </SplideSlide>
             ))}
-        </Splide>
+        </Splide> 
+
+        {/* <CustomCarousal title="Recent Events" images={galleryImages} /> */}
 
         <div>
-          <Button  className="text-lg !p-4" >
+          <Button className="text-lg !p-4" >
             View More
           </Button>
         </div>

@@ -1,100 +1,72 @@
 import {
   SearchOutlined,
-  CodeOutlined,
   FacebookOutlined,
   InstagramOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
 import { useEffect, useState } from "react";
-
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
   useEffect(() => {
-    setCurrentPage(window.location.pathname === "/" ? "home" : window.location.pathname.slice(1));
+    setCurrentPage(
+      window.location.pathname === "/" 
+        ? "home" 
+        : window.location.pathname.slice(1)
+    );
   }, []);
 
   const navLinks = [
-    {
-      name: "Home",
-      url: "/",
-      isActive: currentPage === "home",
-    },
-    {
-      name: "About",
-      url: "/about",
-      isActive: currentPage === "about",
-    },
-    {
-      name: "Event",
-      url: "/event",
-      isActive: currentPage === "event",
-    },
-    {
-      name: "Contact",
-      url: "/contact",
-      isActive: currentPage === "contact",
-    },
+    { name: "Home", url: "/", isActive: currentPage === "home" },
+    { name: "About", url: "/about", isActive: currentPage === "about" },
+    { name: "Event", url: "/event", isActive: currentPage === "event" },
+    { name: "Contact", url: "/contact", isActive: currentPage === "contact" },
   ];
 
-
   return (
-   <nav className="bg-[#F7C6C7] text-black p-4 flex justify-around flex-row w-full border-b-4">
+    <nav className="bg-[#F7C6C7] text-black border-b-4 border-black">
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        <img
+          src="/images/logo-removebg-preview.png"
+          alt="Logo"
+          className="max-h-60 w-68 object-contain"
+        />
 
-     {/* <nav className="bg-[var(--primary-color)] text-white p-4 flex justify-around flex-row w-full border-b-4 "
-    style={{ borderBottomWidth: '4px' }} 
-    > */}
-      <img
-        src="https://www.shutterstock.com/image-vector/ngo-organization-black-glyph-icon-260nw-1795132267.jpg"
-        className="w-24"
-      />
+        <div className="flex flex-col gap-3 flex-1 max-w-2xl ml-12">
+          <div className="flex justify-end gap-4">
+            <FacebookOutlined className="text-lg hover:text-gray-700 cursor-pointer transition" />
+            <InstagramOutlined className="text-lg hover:text-gray-700 cursor-pointer transition" />
+            <TwitterOutlined className="text-lg hover:text-gray-700 cursor-pointer transition" />
+          </div>
 
-      <div className="w-2/3 flex flex-col justify-evenly items-center relative">
-        <div className="text-sm flex gap-4 ">
-          Fort Worth, Texas MON-FRI 09:00 - 19:00, SAT-SUN 10:00 - 14:00
-          <p>
-            Free <CodeOutlined style={{
-              fontSize: "20px"
-            }} />
-          </p>
-          <div className="flex gap-2 absolute right-0">
-            <FacebookOutlined style={{
-              fontSize: "20px"
-            }} />
-            <InstagramOutlined style={{
-              fontSize: "20px"
-            }} />
-            <TwitterOutlined style={{
-              fontSize: "20px"
-            }} />
+          <div className="flex items-center justify-between">
+            <ul className="flex gap-8">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.url}
+                    className={`font-semibold text-base transition-all duration-300 ${
+                      link.isActive
+                        ? "border-b-2 border-black pb-1"
+                        : "hover:border-b-2 hover:border-black pb-1"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex items-center gap-3 ml-8">
+              <SearchOutlined className="text-lg hover:text-gray-700 cursor-pointer transition" />
+              <button className="font-semibold text-base hover:underline transition">
+                Donate Now
+              </button>
+            </div>
           </div>
         </div>
-        <ul className="flex justify-around w-2/3 text-base font-sans font-semibold">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                to={link.url}
-                className={`${
-                  link.isActive ? "border-b-2" : "transition duration-500  hover:border-b-2  hover:border-black hover:border-spacing-y-4"
-                }`}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-
-          <div className="flex gap-2 absolute right-0">
-            <SearchOutlined style={{
-              fontSize: "20px",
-              fontWeight: "100"
-            }} />
-            <p>
-              Donate Now
-            </p>
-          </div>
-        </ul>
       </div>
     </nav>
   );

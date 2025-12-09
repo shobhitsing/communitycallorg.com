@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import CustomCarousal from "../components/Carousal";
+import Footer from "../components/Footer";
 
 const About = () => {
   const CarousalData = [
@@ -24,7 +25,7 @@ const About = () => {
           alt="About Us"
         /> */}
         <p className="text-3xl m-14 text-center pt-12">
-          Welcome to [Your Organization Name], where our mission is to make a
+          Welcome to Your Community-Call-Organization, where our mission is to make a
           difference in the world. Our journey began with a vision to impact
           lives through dedication, hard work, and a passion for helping those
           in need. From humble beginnings, we have grown into a community-driven
@@ -44,6 +45,7 @@ const About = () => {
       </div>
 
       <CustomCarousal title={"Our Journey"} images={CarousalData} />
+      <Footer/>
     </div>
   );
 };

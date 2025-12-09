@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import CustomCarousal from "../components/Carousal";
+import Footer from "../components/Footer";
 
 const Event = () => {
   const CarousalData = [
@@ -36,6 +37,7 @@ const Event = () => {
       </div>
 
       <CustomCarousal title={"Our Events"} images={CarousalData} />
+      <Footer/>
     </div>
   );
 };
