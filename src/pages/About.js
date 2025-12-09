@@ -13,17 +13,17 @@ const About = () => {
       <Navbar />
 
       <div id="about-us" className="flex flex-col items-center">
-        <h1 className="text-[var(--primary-color)] border-b-2 m-2 text-9xl font-bold"
-        style={{ borderBottomWidth: '4px' }} // Custom border height
+        <h1 className="absolute z-20 text-[var(--primary-color)] m-2 text-4xl pt-4 font-bold"
+          style={{ borderBottomWidth: '4px' }}
         >
           About Us
         </h1>
-        <img
+        {/* <img
           src="https://example.com/your-about-us-image.jpg"
           className="w-full"
           alt="About Us"
-        />
-        <p className="text-3xl m-14 text-center">
+        /> */}
+        <p className="text-3xl m-14 text-center pt-12">
           Welcome to [Your Organization Name], where our mission is to make a
           difference in the world. Our journey began with a vision to impact
           lives through dedication, hard work, and a passion for helping those

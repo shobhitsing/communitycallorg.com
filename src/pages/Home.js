@@ -42,7 +42,6 @@ const Home = () => {
     "bg-gray-500",
   ];
 
-  // Animate text to move from right to left and loop and stop on hover
   const marquee = () => {
     let text = document.querySelector(".movableText");
     let textWidth = text.offsetWidth;
@@ -373,7 +372,7 @@ const Home = () => {
         </Button>
       </div>
 
-      <div className="flex flex-row justify-evenly items-center gap-6 mx-32 my-16 text-center" >
+      {/* <div className="flex flex-row justify-evenly items-center gap-6 mx-32 my-16 text-center" >
         <div className="w-2/3">
           <h1 className="text-4xl font-bold"><span className="text-[var(--primary-color)]">Our</span> donners</h1>
           <p className="flex justify-center items-center px-16 my-8">
@@ -406,7 +405,7 @@ const Home = () => {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer />  
     </div>

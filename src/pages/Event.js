@@ -16,16 +16,18 @@ const Event = () => {
       <Navbar />
 
       <div id="recent-events relative" className="flex flex-col items-center">
-        <h1 className="absolute z-20 text-[var(--primary-color)]   m-2 text-9xl font-bold"
-        style={{ borderBottomWidth: '4px' }} // Custom border height
+        <h1
+          className="absolute z-20 text-[var(--primary-color)] m-2 text-4xl pt-4 font-bold"
+          style={{ borderBottomWidth: '4px' }}
         >
           Recent Events
         </h1>
-        <img
+
+        {/* <img
           src="https://media.ahmedabadmirror.com/am/uploads/mediaGallery/image/1677318699846.jpg-org"
           className="w-full"
-        />
-        <p className="text-3xl m-14">
+        /> */}
+        <p className="text-3xl m-14 pt-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
           purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
           Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non

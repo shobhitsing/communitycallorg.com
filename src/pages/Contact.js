@@ -6,18 +6,18 @@ const Contact = () => {
       <Navbar />
 
       <div id="contact-us" className="flex flex-col items-center">
-        <h1 className="text-[var(--primary-color)] border-b-2 m-2 text-9xl font-bold"
-        style={{ borderBottomWidth: '4px' }} // Custom border height
+        <h1  className="absolute z-20 text-[var(--primary-color)] m-2 text-4xl pt-4 font-bold"
+          style={{ borderBottomWidth: '4px' }}
         >
           Contact Us
         </h1>
-        <img
+        {/* <img
           src="https://example.com/contact-us-banner.jpg"
           className="w-full"
           alt="Contact Us"
-        />
+        /> */}
 
-        <p className="text-3xl m-14 text-center">
+        <p className="text-3xl m-14 text-center pt-12">
           We'd love to hear from you! Whether you have a question, feedback, or
           simply want to get involved, feel free to reach out. Fill out the form
           below and we will get back to you as soon as possible.

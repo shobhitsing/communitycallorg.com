@@ -41,9 +41,11 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-[var(--primary-color)] text-white p-4 flex justify-around flex-row w-full border-b-4 "
-    style={{ borderBottomWidth: '4px' }} // Custom border height
-    >
+   <nav className="bg-[#F7C6C7] text-black p-4 flex justify-around flex-row w-full border-b-4">
+
+     {/* <nav className="bg-[var(--primary-color)] text-white p-4 flex justify-around flex-row w-full border-b-4 "
+    style={{ borderBottomWidth: '4px' }} 
+    > */}
       <img
         src="https://www.shutterstock.com/image-vector/ngo-organization-black-glyph-icon-260nw-1795132267.jpg"
         className="w-24"
