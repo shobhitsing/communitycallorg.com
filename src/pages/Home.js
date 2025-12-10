@@ -79,33 +79,14 @@ const Home = () => {
       <Navbar />
       <div
         style={{
-          backgroundImage: `url("https://media.istockphoto.com/id/870402320/photo/a-social-worker-meeting-with-a-group-of-villagers.jpg?s=612x612&w=0&k=20&c=2JlS1vqg4pU5lCp8oiFXjVgMPlHbhrmH4wmtRJdq384=")`,
+          backgroundImage: `url("https://aicdn.picsart.com/2147cba2-1fe6-4970-b8b3-f49783f9ddba.png")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="w-full flex flex-col justify-center items-center h-[80vh] relative mb-44"
+        className="w-full flex flex-col justify-center items-center h-[110vh] relative mb-44"
       >
-        <div>
-          <h1 className="text-4xl backdrop-blur-sm font-extrabold text-white text-center -mt-12 rounded-sm p-2">
-            Welcome to our NGO
-          </h1>
-          <h3 className="text-2xl backdrop-blur-sm font-bold text-white text-center my-12 p-2">
-            We are here to help you
-          </h3>
-        </div>
-        <Button
-          style={{
-            fontSize: "20px",
-            fontWeight: "600",
-          }}
-          className="!px-8 !py-6"
-          type="primary"
-          size="large"
-          shape="round"
-        >
-          Donate Now
-        </Button>
+      
         <div className="absolute flex justify-around -bottom-32 z-20">
           {cardData.map((card, index) => (
             <div
@@ -115,7 +96,7 @@ const Home = () => {
               key={card.title}
             >
               <div
-                className="w-full p-0 m-0 bg-gray-100 absolute -z-20"
+                className="w-full p-0 m-0 bg-gray-100 absolute -z-20 pt-12"
                 style={{
                   backgroundImage: `url("${card.bgImage}")`,
                   backgroundSize: "cover",
@@ -165,7 +146,7 @@ const Home = () => {
         <div
           className="w-full p-0 m-0 bg-gray-100 absolute -z-20 "
           style={{
-            backgroundImage: `url("https://rajivgandhingo.wordpress.com/wp-content/uploads/2017/12/about-us-bal-utsav-bangalore-india.jpg")`,
+           backgroundImage: 'url("/images/img1.jpg")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -249,7 +230,7 @@ const Home = () => {
         <div
           className="w-full p-0 m-0 bg-gray-100 absolute -z-20 "
           style={{
-            backgroundImage: `url("https://rajivgandhingo.wordpress.com/wp-content/uploads/2017/12/about-us-bal-utsav-bangalore-india.jpg")`,
+            backgroundImage: 'url("/images/img2.jpg")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

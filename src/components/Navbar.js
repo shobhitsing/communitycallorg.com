@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#F7C6C7] text-black border-b-4 border-black">
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <img
           src="/images/logo-removebg-preview.png"
           alt="Logo"

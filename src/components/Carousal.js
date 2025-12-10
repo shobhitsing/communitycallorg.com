@@ -29,11 +29,12 @@ const CustomCarousal = ({ title, images }) => {
   }
 
   const galleryImages = [
-    "/images/child.jpg",
-    "/images/child2.jpg",
-    "/images/child3.jpg",
-    "/images/child4.jpg",
-    "/images/child5.jpg",
+    "/images/img1.jpg",
+    "/images/img2.jpg",
+    "/images/child6.jpg",
+    "/images/child7.jpg",
+    "/images/child8.jpg",
+    "/images/child9.jpg",
   ];
 
   return (
