@@ -11,26 +11,26 @@ import MidContent from "../components/MidContent";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  const cardData = [
+   const cardData = [
     {
       title: "Child Education",
       description: "We provide free education to children",
       bgColor: "bg-red-500/75",
-      bgImage: "https://www.efficientindia.com/img/other/ngo.png",
+      bgImage: "/images/img1.jpg",
     },
     {
       title: "Refugee Support",
       description: "We provide food and shelter to refugees",
       bgColor: "bg-blue-500/75",
       bgImage:
-        "https://www.dailypioneer.com/uploads/2017/story/images/big/191286_1.jpg",
+        "/images/img2.jpg",
     },
     {
       title: "Food Distribution",
       description: "We provide food to the homeless",
       bgColor: "bg-green-500/75",
       bgImage:
-        "https://t4.ftcdn.net/jpg/08/34/57/13/360_F_834571348_LQUKI6sFfMrU1WYhoABOnoF9NOK819wK.jpg",
+        "/images/child9.jpg",
     },
   ];
 
@@ -146,7 +146,7 @@ const Home = () => {
         <div
           className="w-full p-0 m-0 bg-gray-100 absolute -z-20 "
           style={{
-           backgroundImage: 'url("/images/img1.jpg")',
+            backgroundImage: 'url("/images/img1.jpg")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
