@@ -15,29 +15,31 @@ const Event = () => {
   return (
     <div>
       <Navbar />
-
-      <div id="recent-events relative" className="flex flex-col items-center">
+      <div id="recent-events" className="relative flex flex-col items-center px-4">
         <h1
-          className="absolute z-20 text-[var(--primary-color)] m-2 text-4xl pt-4 font-bold"
-          style={{ borderBottomWidth: '4px' }}
+          className="absolute z-20 text-[var(--primary-color)] m-2 text-4xl pt-4 font-extrabold tracking-wide"
         >
           Recent Events
         </h1>
 
-        {/* <img
-          src="https://media.ahmedabadmirror.com/am/uploads/mediaGallery/image/1677318699846.jpg-org"
-          className="w-full"
-        /> */}
-        <p className="text-3xl m-14 pt-12">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
-          purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.
-          Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non
-          elit dui.
-        </p>
+        <div className="mt-24 max-w-5xl text-left">
+          <p className="text-[1.20rem] md:text-[1.35rem] leading-relaxed text-gray-800">
+            Our recent events reflect our continued commitment to community engagement,
+            social development, and impactful initiatives. Each activity is designed to
+            bring people together, inspire collaboration, and create meaningful change
+            across the communities we serve.
+          </p>
+          <p className="text-[1.20rem] md:text-[1.35rem] mt-6 leading-relaxed text-gray-800">
+            Through awareness drives, educational workshops, healthcare outreach, and
+            environmental campaigns, we strive to address pressing social needs while
+            empowering individuals to participate in collective progress. Every event
+            stands as a testament to our mission of building a stronger and more
+            inclusive future.
+          </p>
+        </div>
       </div>
-
       <CustomCarousal title={"Our Events"} images={CarousalData} />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
