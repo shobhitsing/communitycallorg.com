@@ -130,6 +130,7 @@
 
 
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import { Search, Facebook, Instagram, Youtube, Menu, X, Heart } from 'lucide-react';
 
 const Navbar = () => {
@@ -151,7 +152,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  const navigate = useNavigate();
   const navLinks = [
     { name: 'Home', url: '/' },
     { name: 'About', url: '/about' },
@@ -245,7 +246,9 @@ const Navbar = () => {
               </div>
 
 
-              <button className="flex items-center gap-2 bg-black text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-md">
+              <button className="flex items-center gap-2 bg-black text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-md"
+                onClick={() => navigate("/donate")}
+              >
                 <Heart className="w-4 h-4 fill-current" />
                 Donate Now
               </button>

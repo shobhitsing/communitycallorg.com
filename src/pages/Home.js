@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import { Button, Carousel } from "antd";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import "@splidejs/react-splide/css";
 import "../styles/Home.css";
@@ -31,14 +32,7 @@ const Home = () => {
     },
   ];
 
-  const buttonColors = [
-    "bg-yellow-500",
-    "bg-purple-500",
-    "bg-pink-500",
-    "bg-indigo-500",
-    "bg-gray-500",
-  ];
-
+ const navigate = useNavigate();
 
   return (
     <div>
@@ -187,6 +181,7 @@ const Home = () => {
           className={`!px-4 !py-4`}
           size="large"
           shape="round"
+          onClick={() => navigate("/donate")}
         >
           Donate Now
         </Button>
