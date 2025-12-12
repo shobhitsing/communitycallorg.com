@@ -153,16 +153,15 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', url: '/', isActive: currentPage === 'home' },
-    { name: 'About', url: '/about', isActive: currentPage === 'about' },
-    { name: 'Event', url: '/event', isActive: currentPage === 'event' },
-    { name: 'Contact', url: '/contact', isActive: currentPage === 'contact' },
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about' },
+    { name: 'Event', url: '/event' },
+    { name: 'Contact', url: '/contact' },
   ];
 
   return (
     <nav
-      className={`sticky top-0 z-50 bg-gradient-to-r from-[#F7C6C7] via-[#FFD4D4] to-[#F7C6C7] text-gray-900 transition-all duration-300 ${scrolled ? 'shadow-lg border-b-2' : 'border-b-4'
-        } border-black`}
+      className={`sticky top-0 z-50 bg-animated-gradient bg-[length:200%_200%] animate-gradient-x text-gray-900 transition-all duration-300 ${scrolled ? 'border-b-2' : 'border-b-4'}`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-24">
@@ -178,7 +177,7 @@ const Navbar = () => {
             <ul className="flex gap-10">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a
+                  {/* <a
                     href={link.url}
                     className={`relative font-bold text-base tracking-wide transition-all duration-300 group ${link.isActive ? 'text-black' : 'text-gray-700 hover:text-black'
                       }`}
@@ -186,11 +185,27 @@ const Navbar = () => {
                     {link.name}
                     <span
                       className={`absolute bottom-0 left-0 w-full h-0.5 bg-black transform transition-all duration-300 ${link.isActive
-                          ? 'scale-x-100'
-                          : 'scale-x-0 group-hover:scale-x-100'
+                        ? 'scale-x-100'
+                        : 'scale-x-0 group-hover:scale-x-100'
                         }`}
                     />
+                  </a> */}
+                  <a
+                    href={link.url}
+                    className={`font-semibold text-base transition-colors duration-300
+                      ${currentPage === link.url.slice(1) || (link.url === '/' && currentPage === 'home')
+                        ? 'text-gray-900'
+                        : 'text-gray-600 hover:text-gray-900'
+                      }`}
+                  >
+                    {link.name}
+                    <span
+                      className={`absolute bottom-0 left-0 w-full h-0.5 rounded bg-gradient-to-r from-pink-500 via-yellow-400 to-green-500
+                      transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out
+                    ${currentPage === link.url.slice(1) || (link.url === '/' && currentPage === 'home') ? 'scale-x-100' : ''}`}
+                    />
                   </a>
+
                 </li>
               ))}
             </ul>
@@ -258,8 +273,8 @@ const Navbar = () => {
                   href={link.url}
                   onClick={() => setMenuOpen(false)}
                   className={`block font-bold text-lg py-2 px-4 rounded-lg transition-all duration-300 ${link.isActive
-                      ? 'bg-black text-white'
-                      : 'hover:bg-black/10 text-gray-700'
+                    ? 'bg-black text-white'
+                    : 'hover:bg-black/10 text-gray-700'
                     }`}
                 >
                   {link.name}
