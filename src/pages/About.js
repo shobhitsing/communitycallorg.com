@@ -14,7 +14,7 @@ const About = () => {
       <Navbar />
 
       <div id="about-us" className="flex flex-col items-center px-4">
-        <h1 className="absolute z-20 text-[var(--primary-color)] m-2 text-5xl pt-4 font-extrabold tracking-wide">
+        <h1 className="absolute z-20 text-[var(--primary-color)] m-2 text-5xl pt-4 font-bold tracking-wide">
           About Us
         </h1>
         <div className="mt-28 max-w-5xl text-left space-y-14 text-gray-800">
